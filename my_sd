@@ -1,0 +1,19 @@
+#Create a function: my_sd()
+my_sd <- function(input_vec){
+  x_bar <- mean(input_vec)
+  n_minus_one <- length(input_vec)-1
+  
+  for(i in 1:length(input_vec)){
+    input_vec_sum_square <-(input_vec[i]-x_bar)^2
+  }
+  return(sqrt(input_vec_sum_square/n_minus_one))
+}
+
+
+#Create an input
+set.seed(87)
+my_seq <- round(runif(10)*100)
+
+#Function call
+my_sd(my_seq)
+sd(my_seq)
